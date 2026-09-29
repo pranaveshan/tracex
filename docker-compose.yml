@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tracex-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - BLOCKCHAIN_MODE=demo
+      - DATABASE_URL=sqlite:///./tracex.db
+      - SECRET_KEY=tracex-production-secret-key-2026
+    volumes:
+      - ./backend/tracex.db:/app/tracex.db
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: tracex-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped

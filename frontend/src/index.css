@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF9F6;
+    color: #191E24;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+  }
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace !important;
+}
+
+/* Warm Card Styling */
+.warm-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE6DF;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(32, 28, 24, 0.03), 0 6px 18px rgba(32, 28, 24, 0.02);
+}
+
+.warm-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.warm-card-hover:hover {
+  border-color: #D6D0C5;
+  box-shadow: 0 4px 12px rgba(32, 28, 24, 0.06), 0 12px 28px rgba(32, 28, 24, 0.04);
+}
+
+/* Approachable Data Tables */
+.soft-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  font-size: 13px;
+}
+
+.soft-table th {
+  background-color: #F4F1EB;
+  color: #5C6470;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 11px 16px;
+  border-bottom: 1px solid #EAE6DF;
+  white-space: nowrap;
+}
+
+.soft-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #F2EFE9;
+  color: #2D343F;
+  background-color: #FFFFFF;
+  vertical-align: middle;
+}
+
+.soft-table tr:hover td {
+  background-color: #FAF8F5;
+}
+
+/* Custom Soft Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4CEBE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B09E;
+}
